@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import ru.offerfactory.alfasobes.presentation.RegistrationScreen
+import ru.offerfactory.alfasobes.presentation.RegistrationUiState
 import ru.offerfactory.alfasobes.ui.theme.AlfasobesTheme
 
 class MainActivity : ComponentActivity() {
@@ -13,7 +14,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             AlfasobesTheme {
-                RegistrationScreen()
+                RegistrationScreen(RegistrationUiState(), onAction = {})
             }
         }
     }
